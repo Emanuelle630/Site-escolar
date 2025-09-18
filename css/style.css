@@ -8,24 +8,26 @@
 /* Fonte e fundo */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  background: linear-gradient(120deg, #d9e4f5, #f6f9fc);
   color: #333;
   padding: 20px;
+  line-height: 1.6;
 }
 
 /* Cabeçalho */
 header {
-  background-color: #1e3c72;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
   color: white;
-  padding: 30px 20px;
+  padding: 40px 20px;
   text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
 /* Navegação */
@@ -34,44 +36,51 @@ nav ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 10px;
+  gap: 12px;
+  margin-top: 15px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  padding: 8px 14px;
+  padding: 10px 18px;
   border: 2px solid white;
-  border-radius: 5px;
-  transition: 0.3s;
+  border-radius: 30px;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
   background-color: white;
   color: #1e3c72;
+  transform: scale(1.05);
 }
 
 /* Conteúdo principal */
 main {
-  max-width: 900px;
-  margin: 40px auto;
+  max-width: 1000px;
+  margin: 50px auto;
   background-color: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
 main h2 {
   text-align: center;
   color: #1e3c72;
   margin-bottom: 20px;
+  font-size: 2rem;
+  border-bottom: 3px solid #1e3c72;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 main p {
-  text-align: center;
+  text-align: justify;
   font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #444;
 }
 
 /* Imagem inicial */
@@ -79,79 +88,106 @@ main p {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 20px auto;
-  border-radius: 10px;
+  margin: 25px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Grade de planetas */
 .grid-planetas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 25px;
   justify-items: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .planeta {
   text-align: center;
-  background-color: #f1f6fb;
-  padding: 15px;
-  border-radius: 10px;
-  transition: transform 0.2s;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(145deg, #f1f6fb, #ffffff);
+  padding: 18px;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .planeta:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .planeta img {
-  width: 80px;
+  width: 90px;
   height: auto;
-  margin-bottom: 10px;
-  transition: transform 0.3s;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
 }
 
 .planeta img:hover {
-  transform: scale(1.1);
+  transform: scale(1.12) rotate(2deg);
 }
 
 .planeta p {
   font-weight: 700;
   color: #1e3c72;
   font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Botão Voltar ao topo */
+.btn-voltar {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background: #fff;
+  color: #1e3c72;
+  border: 2px solid #1e3c72;
+  transform: scale(1.05);
 }
 
 /* Rodapé */
 footer {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 50px;
   padding: 20px;
-  background-color: #1e3c72;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
   color: white;
-  border-radius: 10px;
-  font-size: 0.9rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
   main {
-    padding: 20px;
+    padding: 25px;
   }
 
   nav ul {
-    gap: 10px;
+    gap: 8px;
+  }
+
+  main h2 {
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width: 480px) {
   header h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   nav a {
-    padding: 6px 10px;
+    padding: 6px 12px;
     font-size: 0.9rem;
   }
 
@@ -161,7 +197,7 @@ footer {
   }
 
   .planeta img {
-    width: 60px;
+    width: 65px;
   }
 
   .planeta p {
